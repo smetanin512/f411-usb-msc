@@ -36,3 +36,11 @@ STM32L152-Discovery.elf.launch
 
 # Qt
 *.qbs.user
+
+.settings/language.settings.xml
+
+*.d
+*.mk
+
+/Debug
+

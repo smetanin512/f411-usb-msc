@@ -1992,8 +1992,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLN = 192;
  80012c8:	23c0      	movs	r3, #192	; 0xc0
  80012ca:	647b      	str	r3, [r7, #68]	; 0x44
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 80012cc:	2302      	movs	r3, #2
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+ 80012cc:	2304      	movs	r3, #4
  80012ce:	64bb      	str	r3, [r7, #72]	; 0x48
   RCC_OscInitStruct.PLL.PLLQ = 4;
  80012d0:	2304      	movs	r3, #4
@@ -2018,8 +2018,8 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
  80012ec:	2302      	movs	r3, #2
  80012ee:	613b      	str	r3, [r7, #16]
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV2;
- 80012f0:	2380      	movs	r3, #128	; 0x80
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 80012f0:	2300      	movs	r3, #0
  80012f2:	617b      	str	r3, [r7, #20]
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
  80012f4:	2300      	movs	r3, #0
