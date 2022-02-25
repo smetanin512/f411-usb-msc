@@ -39,3 +39,4 @@
 "./Middlewares/Third_Party/FatFs/src/option/syscall.o"
 "./USB_HOST/App/usb_host.o"
 "./USB_HOST/Target/usbh_conf.o"
+"./USB_HOST/Target/usbh_platform.o"
