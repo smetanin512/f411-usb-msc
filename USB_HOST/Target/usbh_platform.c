@@ -24,6 +24,9 @@
 
 /* USER CODE BEGIN INCLUDE */
 
+// УУУ еба, нанде MX_DriverVbusFS долбаёб ?
+// Добавлена инверсия "!"
+
 /* USER CODE END INCLUDE */
 
 /**
@@ -48,7 +51,7 @@ void MX_DriverVbusFS(uint8_t state)
     data = GPIO_PIN_RESET;
   }
   /* USER CODE END PREPARE_GPIO_DATA_VBUS_FS */
-  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,(GPIO_PinState)data);
+  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,(GPIO_PinState)data);
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

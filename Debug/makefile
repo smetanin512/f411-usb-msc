@@ -43,34 +43,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := f411-usb-msc
+BUILD_ARTIFACT_NAME := My_Fuckin_Slave
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-f411-usb-msc.elf \
+My_Fuckin_Slave.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-f411-usb-msc.list \
+My_Fuckin_Slave.list \
 
 OBJCOPY_BIN += \
-f411-usb-msc.bin \
+My_Fuckin_Slave.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: f411-usb-msc.elf secondary-outputs
+main-build: My_Fuckin_Slave.elf secondary-outputs
 
 # Tool invocations
-f411-usb-msc.elf: $(OBJS) $(USER_OBJS) /home/user/STM32CubeIDE/workspace170/f411-usb-msc/STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "f411-usb-msc.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/user/STM32CubeIDE/workspace170/f411-usb-msc/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f411-usb-msc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+My_Fuckin_Slave.elf: $(OBJS) $(USER_OBJS) /home/user/STM32CubeIDE/workspace_for_double_debugging/My_Fuckin_Slave/STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "My_Fuckin_Slave.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/user/STM32CubeIDE/workspace_for_double_debugging/My_Fuckin_Slave/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="My_Fuckin_Slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -79,19 +79,19 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-f411-usb-msc.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "f411-usb-msc.list"
+My_Fuckin_Slave.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "My_Fuckin_Slave.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-f411-usb-msc.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "f411-usb-msc.bin"
+My_Fuckin_Slave.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "My_Fuckin_Slave.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) f411-usb-msc.elf
+	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) My_Fuckin_Slave.elf
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)

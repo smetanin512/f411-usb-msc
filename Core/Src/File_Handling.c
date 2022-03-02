@@ -6,12 +6,11 @@
  */
 
 #include "File_Handling.h"
-#include "main.h"
-//#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal.h"
 
 
-extern UART_HandleTypeDef huart2;
-#define UART &huart2
+extern UART_HandleTypeDef huart1;
+#define UART &huart1
 
 
 
